@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Mobile Suit Z-Gundam (Disc 2)"
+id = "SLPS-01143"
+players = 1
+exe = "disc/SLPS_011.43"
+disc = "disc/Mobile Suit Z-Gundam (Japan) (Disc 2).cue"
+discs = ["disc/Mobile Suit Z-Gundam (Japan) (Disc 2).cue"]
+disc_serials = ["SLPS-01143"]
+load_address = "0x80010000"
+entry_pc = "0x8002EC54"
+text_size = "0x0004C000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Mobile Suit Z-Gundam (Japan) (Disc 2) (Track 1).bin"
+cue_name = "Mobile Suit Z-Gundam (Japan) (Disc 2).cue"
+boot_exe = "SLPS_011.43"
+known_sizes = [483578256]
+known_md5 = [
+  "949485cf63c9945bf93fbf43b79f686b",
+]
+known_sha1 = [
+  "b76800bb9345e30ed615620534999ad39f4da3c3",
+]
+known_crc32 = [
+  "ce5af229",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5500.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Mobile Suit Z-Gundam (Disc 2) Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 17
+required_disc_fp = "e5ff1cde74be3487cf6f9a97a8b987a385956574fd2ba643da8f504fc1bb6071"

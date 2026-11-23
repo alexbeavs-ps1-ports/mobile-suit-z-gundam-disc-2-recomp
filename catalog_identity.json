@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Mobile Suit Z-Gundam (Disc 2)",
+    "id": "SLPS-01143",
+    "boot_exe": "SLPS_011.43"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Japan",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Mobile Suit Z-Gundam (Japan) (Disc 2).cue",
+    "bin_name": "Mobile Suit Z-Gundam (Japan) (Disc 2) (Track 1).bin",
+    "track_counts": [
+      17
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 483578256,
+      "md5": "949485cf63c9945bf93fbf43b79f686b",
+      "sha1": "b76800bb9345e30ed615620534999ad39f4da3c3",
+      "crc32": "ce5af229"
+    },
+    "disc_fp": "e5ff1cde74be3487cf6f9a97a8b987a385956574fd2ba643da8f504fc1bb6071"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8002EC54",
+    "text_size": "0x0004C000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 537,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

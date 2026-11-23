@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "mobile-suit-z-gundam-disc-2-psx",
+  "name": "Mobile Suit Z-Gundam (Disc 2)",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "mobile-suit-z-gundam-disc-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "ce5af229"
+    ],
+    "md5": [
+      "949485cf63c9945bf93fbf43b79f686b"
+    ],
+    "sha1": [
+      "b76800bb9345e30ed615620534999ad39f4da3c3"
+    ],
+    "disc_serials": [
+      "SLPS-01143"
+    ],
+    "sizes": [
+      483578256
+    ],
+    "filenames": [
+      "Mobile Suit Z-Gundam (Japan) (Disc 2).cue",
+      "Mobile Suit Z-Gundam (Japan) (Disc 2) (Track 1).bin"
+    ],
+    "track_counts": [
+      17
+    ],
+    "disc_fps": [
+      "e5ff1cde74be3487cf6f9a97a8b987a385956574fd2ba643da8f504fc1bb6071"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5500.BIN",
+    "profile": "SCPH5500",
+    "crc32": [
+      "ff3eeb8c"
+    ],
+    "md5": [
+      "8dd7d5296a650fac7319bce665a6a53c"
+    ],
+    "sha1": [
+      "b05def971d8ec59f346f2d9ac21fb742e3eb6917"
+    ],
+    "sha256": [
+      "9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5500.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/mobile-suit-z-gundam-disc-2-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "mobile-suit-z-gundam-disc-2-*-windows-x64.zip",
+      "linux-x64": "mobile-suit-z-gundam-disc-2-*-linux-x64.zip",
+      "macos-arm64": "mobile-suit-z-gundam-disc-2-*-macos-arm64.zip",
+      "macos-x64": "mobile-suit-z-gundam-disc-2-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "mobile_suit_z_gundam_disc_2.exe",
+    "linux": "mobile_suit_z_gundam_disc_2",
+    "macos": "mobile_suit_z_gundam_disc_2"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/mobile-suit-z-gundam-disc-2-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
